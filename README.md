@@ -1,4 +1,4 @@
-# Junit / Maven template
+# Junit / Maven Template
 
 ## Historical Log
 
@@ -7,8 +7,8 @@
 
 ## Architecture
 
-Tests are stored in `\tdd\src\test\java\com\symflower\`
-For code stored in `\tdd\src\main\java\com\symflower\`
+* Tests are stored in `\tdd\src\test\java\com\symflower\`
+* For code stored in `\tdd\src\main\java\com\symflower\`
 
 ## Usage
 
@@ -20,4 +20,6 @@ To run tests from a specific test class only, use:
 
 `mvn test -Dtest="TriangleTest"`
 
-To run tests and only print failures and our print statements, use `-q` for quiet, ie `mvn test -q`
+To run tests and only print failures and our print statements, use the quiet flag:
+
+`-q` or `--quiet` ie `mvn test -q`
