@@ -1,6 +1,5 @@
 package com.symflower.demo;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
 /**
@@ -32,17 +31,37 @@ public class AppTest {
      * An example test
      */
     @Test
-    public void shouldAnswerWithTrue() {
+    public void expectTrue() {
         System.out.println("First test!");
-        Assertions.assertTrue(true);
+        Assertions.assertTrue(true, "Expect true");
     }
 
     /**
      * Another example test
      */
     @Test
-    public void shouldAnswerWithFalse() {
+    public void expectFalse() {
         System.out.println("Second test!");
-        Assertions.assertFalse(false);
+        Assertions.assertFalse(false, "Expect false");
+    }
+
+    @Test
+    public void expectMatch() {
+        System.out.println("Third test!");
+        int actual = Integer.parseInt("1");
+        Assertions.assertEquals(1, actual, "Expect comparison to match");
+    }
+
+    // @Test
+    // public void failOnDemand() {
+    //     Assertions.fail("This test fails on purpose.");
+    // }
+
+    @Test
+    public void expectClassMethodReturn() {
+        String argument = "Lorem ipsum dolor sit amet";
+        String actual = App.helloWorld(new String[]{argument});
+        String expected = "Hello World: " + argument;
+        Assertions.assertEquals(expected, actual, "Test App class's Hello World string");
     }
 }
