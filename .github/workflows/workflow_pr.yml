@@ -1,0 +1,8 @@
+name: Pull Request Workflows
+
+on:
+  pull_request:
+
+jobs:
+  pr-tests:
+    uses: ./.github/workflows/job_tests.yml
