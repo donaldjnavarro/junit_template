@@ -1,2 +1,32 @@
+# Maven
+target/
+*.log
 
-/target/surefire-reports
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ build output
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test output (if you redirect to specific files/folders)
+test-output/
+surefire-reports/
+
+# Optional: Local dev tools or environment files
+.env
+*.local
